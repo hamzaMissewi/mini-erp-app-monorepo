@@ -1,0 +1,20 @@
+{
+  "name": "mini-erp-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:frontend": "pnpm --filter @app/frontend dev",
+    "dev:backend": "pnpm --filter @app/backend start:dev",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^1.8.0",
+    "pnpm": "^8.0.0"
+  }
+}
